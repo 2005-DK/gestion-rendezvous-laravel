@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Mail;
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+
+class NouveauRendezVousClient extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    public $client;
+
+    public function __construct($client)
+    {
+        $this->client = $client;
+    }
+
+    public function build()
+    {
+        return $this->subject('Confirmation de votre rendez-vous notarial')
+                    ->view('emails.rendezvous_client');
+    }
+}
+
+
