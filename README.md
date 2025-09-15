@@ -29,3 +29,4 @@ Frontend : Blade, Tailwind CSS (ou React.js selon version)
 Base de données : MySQL
 
 Outils : GitHub, XAMPP, Chart.js (pour les graphiq
+
